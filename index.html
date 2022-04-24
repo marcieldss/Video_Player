@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./assets/icone.png.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <title>Top 5 Musicas</title>
+</head>
+
+<body>
+    <header>
+        <div id="conteudo-title">
+            <h1 class="title">Top Coletânea - Músicas</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div id="container-video">
+                <video src="./assets/videos/JesseAguiar.mp4" poster="./assets/alivio.jpg" ondblclick="telaCheia()" id="video" onclick="playPause()" onmouseover="aparecer()" onmouseout="sumir()"></video>
+                <div class="conteudo-btn">
+                    <div id="controles" onmouseover="aparecer()" onmouseout="sumir()" class="btn-box">
+                        <div id="progressBar-ctn">
+                            <div id="progressBar-percorrido"></div>
+                            <input type="range" style="width: 100%;" id="input-progressBar" onchange="progress()" min="0" max="1000" step="0.5" value="0">
+                        </div>
+                        <img class="btn" id="playPauseBtn" onclick="PlayPauseTroca()" src="./assets/outline_play_circle_outline_black_24dp.png">
+                        <img class="btn" onclick="voltar()" src="./assets/outline_replay_10_black_24dp.png">
+                        <img class="btn" onclick="avancar()" src="./assets/outline_forward_10_black_24dp.png">
+                        <img class="btn" onclick="lento()" src="./assets/outline_fast_rewind_black_24dp.png">
+                        <img class="btn" onclick="rapido()" src="./assets/outline_fast_forward_black_24dp.png">
+
+                        <img class="btn vol" onclick="telaCheia()" width="26px" src="./assets/outline_fullscreen_black_36dp.png">
+                        <input type="range" id="volbar" onchange="nivelVol()" class="volbar vol" min="0" max="100" step="0.5" value="100">
+                        <img class="btn vol" onclick="mudo()" id="imageVol" src="./assets/outline_volume_up_black_24dp.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="next-video">
+                <a href="#conteudo-title">
+                    <div class="listvideo"><img class="img-list" src="./assets/cesarfabiano.jpg" alt="Tá Chorando porque?">
+                        <h3>1º - Tá Chorando porque?</h3>
+                    </div>
+                </a>
+                <a href="#conteudo-title">
+                    <div class="listvideo"><img class="img-list" src="./assets/alivio.jpg" alt="Alivio">
+                        <h3>2º - Alivio - Jesse Aguiar</h3>
+                    </div>
+                </a>
+                <a href="#conteudo-title">
+                    <div class="listvideo"><img class="img-list" src="./assets/rioazul.jpg" alt="Alem do rio azul">
+                        <h3>3º - Além do Rio Azul</h3>
+                    </div>
+                </a>
+                <a href="#conteudo-title">
+                    <div class="listvideo"><img class="img-list" src="./assets/agnus.jpg" alt="Agnus dei">
+                        <h3>4º - Agnus dei - Michael W. Smith</h3>
+                    </div>
+                </a>
+                <a href="#conteudo-title">
+                    <div class="listvideo"><img class="img-list" src="./assets/rafagomes.jpg" alt="Aleluia">
+                        <h3>5º - Aleluia - Rafa Gomes</h3>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <span><b> Esta página foi inteiramente desevolvida com a finalidade de estudo. Não a utilize para fins comerciais</b> </span>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
